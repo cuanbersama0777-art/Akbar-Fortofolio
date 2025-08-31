@@ -13,7 +13,7 @@
 }
 .loader {
   border: 8px solid #f3f3f3;
-  border-top: 8px solid #007bff;
+  border-top: 8px solid #2f8858;
   border-radius: 50%;
   width: 70px;
   height: 70px;
@@ -51,7 +51,7 @@ body {
 
 /* 🔹 Header */
 header {
-  background: linear-gradient(135deg, #007bff, #00c6ff);
+  background: #2f8858;
   color: white;
   text-align: center;
   padding: 4px 0;
@@ -100,7 +100,7 @@ section { padding: 40px 0; }
   gap: 20px;
 }
 .project-card {
-  background: linear-gradient(135deg, #007bff, #00c6ff);
+  background: #2f8858;
   padding: 20px;
   border-radius: 8px;
   text-align: center;
@@ -125,13 +125,13 @@ input, textarea, button {
   border: 1px solid #ccc;
 }
 button {
-  background: linear-gradient(135deg, #007bff, #00c6ff);
+  background: #2f8858;
   color: white;
   border: none;
   cursor: pointer;
   transition: background 0.3s;
 }
-button:hover { background: linear-gradient(135deg, #007bff, #00c6ff); }
+button:hover { background: #2f8858; }
 
 /* 🔹 Footer */
 footer {
@@ -142,4 +142,247 @@ footer {
   margin-top: 0.5px;
   
 p {font-size: 0.9rem; }
+}
+
+/* Styling khusus halaman Skill */
+body.skill-page {
+  background: #f9f9f9;
+}
+
+.skill-container {
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 20px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.skill-container h2 {
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.skill-container ul {
+  list-style: none;
+  padding: 0;
+}
+
+.skill-container ul li {
+  font-size: 18px;
+  margin: 10px 0;
+}
+/* Container login di tengah layar */
+.login-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* full tinggi layar */
+  background-color: #f2f2f2; /* warna latar agar terlihat */
+  font-family: Arial, sans-serif;
+}
+
+/* Form login */
+.login-container form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 30px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  width: 300px;
+  text-align: center;
+}
+
+/* Input dan tombol */
+.login-container input {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+}
+
+.login-container button {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #2f8858;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.login-container button:hover {
+  background-color: #2f8858;
+}
+.bottom-nav {
+  position: fixed;       /* tetap di bawah layar */
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #fff;
+  border-top: 1px solid #ccc;
+  display: flex;
+  justify-content: space-around;
+  padding: 10px 0;
+  box-shadow: 0 -2px 5px rgba(0,0,0,0.1);
+  z-index: 1000;
+}
+
+.bottom-nav a {
+  text-decoration: none;
+  color: #333;
+  font-size: 14px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.bottom-nav a i {
+  font-size: 20px;
+  margin-bottom: 3px;
+}
+
+.bottom-nav a:hover {
+  color: #2f8858;
+}
+/* Animasi slide masuk dari kanan */
+.slide-in {
+  animation: slideIn 0.5s ease forwards;
+}
+
+/* Animasi slide keluar ke kiri */
+.slide-out {
+  animation: slideOut 0.5s ease forwards;
+}
+
+@keyframes slideIn {
+  from { transform: translateX(100%); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes slideOut {
+  from { transform: translateX(0); opacity: 1; }
+  to { transform: translateX(-100%); opacity: 0; }
+}
+/* Beri ruang ekstra di bawah supaya konten terakhir tidak tertutup */
+main {
+  padding-bottom: 80px; /* sesuaikan tinggi navigasi bawah */
+}
+#projects {
+  padding-bottom: 80px; /* sama dengan tinggi bottom-nav */
+}
+
+#slideshow .container {
+  max-width: 900px;
+  margin: auto;
+  border: 3px solid #00cd2; 
+}
+
+#slideshow .slides img {
+  width: 100%; /* mengikuti container */
+  height: 250px; /* bisa disesuaikan */
+  object-fit: cover;
+}
+
+#slideshow .slides {
+  display: none;
+}
+
+#slideshow .slides:first-child {
+  display: block; /* slide pertama tampil saat load */
+}
+#slideshow .container {
+  max-width: 900px; /* lebar sama dengan project cards */
+  margin: 30px auto; /* beri jarak atas-bawah */
+  border: 3px solid #00cd2a; /* bingkai tegas */
+  border-radius: 15px; /* sudut membulat */
+  overflow: hidden; /* agar gambar tidak keluar dari bingkai */
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3); /* efek shadow agar lebih menarik */
+  background-color: #000000; /* opsional, biar kontras */
+  z-index: 1; /* Pastikan lebih rendah dati navigasi */
+  position: relative;
+}
+.slides {
+  display: none;
+}
+
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: 0.4} 
+  to {opacity: 1}
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-bottom: 30px;
+}
+
+.social-links a {
+  text-decoration: none;
+  color: #333;
+  font-size: 20px;
+  transition: transform 0.3s, color 0.3s;
+}
+
+.social-links a:hover {
+  color: ##2f8858;
+  transform: scale(1.2);
+}
+
+form input, form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+form button {
+  padding: 10px 20px;
+  background-color: #2f8858;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+form button:hover {
+  background-color: #0056b3;
+}
+
+.social-links {
+  display: flex;
+  justify-content: center; /* sejajar di tengah */
+  align-items: center;     /* vertikal center */
+  gap: 20px;               /* jarak antar link */
+  margin-bottom: 30px;
+}
+
+.social-links a {
+  display: flex;
+  align-items: center;     /* icon dan teks sejajar */
+  text-decoration: none;
+  color: #333;
+  font-size: 12px;         /* ukuran teks standar */
+  transition: transform 0.3s, color 0.3s;
+}
+
+.social-links a i {
+  font-size: 10px;         /* ukuran ikon */
+  margin-right: 8px;       /* jarak antara ikon dan teks */
+}
+
+.social-links a:hover {
+  color: #007bff;
+  transform: scale(1.1);
 }
