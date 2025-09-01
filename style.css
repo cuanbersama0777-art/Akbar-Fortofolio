@@ -1,0 +1,106 @@
+/* Reset & dasar layout */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* mencegah scroll horizontal */
+  display: flex;
+  flex-direction: column;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #1f1c2c, #928dab); /* background maskulin */
+  color: white;
+}
+
+/* Container utama */
+.container {
+  flex: 1;
+  max-width: 400px;
+  margin: auto;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Profil */
+.profile img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #FFF; /* bingkai kontras */
+  margin-bottom: 15px;
+}
+
+.profile h1 {
+  margin-bottom: 5px;
+  color: #FFF; /* warna nama */
+}
+
+/* Tulisan berjalan */
+.scroll-container {
+  width: 100%;
+  overflow: hidden;
+  box-sizing: border-box;
+  margin-bottom: 30px;
+}
+
+.scroll-text {
+  display: inline-block;
+  white-space: nowrap;
+  color: #FFF; /* warna tulisan marquee */
+  animation: marquee 10s linear infinite;
+}
+
+@keyframes marquee {
+  0% { transform: translateX(100%); }
+  100% { transform: translateX(-100%); }
+}
+
+/* Section Sosial Media */
+section h2 {
+  margin-bottom: 20px;
+  color: #FFF;
+}
+
+.links a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  text-decoration: none;
+  background: rgba(255,255,255,0.1);
+  color: white;
+  padding: 15px;
+  margin: 10px 0;
+  border-radius: 10px;
+  transition: transform 0.2s ease, background 0.3s ease;
+  font-size: 1.1rem;
+}
+
+.links a i {
+  font-size: 1.5rem;
+}
+
+/* Branding warna ikon sosial media */
+.links a i.fab.fa-instagram { color: #E1306C; }
+.links a i.fab.fa-telegram { color: #1DA1F2; }
+.links a i.fab.fa-tiktok { color: #000000; }
+.links a i.fab.fa-linkedin-in { color: #0A66C2; }
+.links a i.fab.fa-whatsapp { color: #25D366; }
+
+.links a:hover {
+  transform: scale(1.05);
+  background: rgba(255,255,255,0.2);
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 15px;
+  font-size: 0.8rem;
+  color: #ccc;
+}
